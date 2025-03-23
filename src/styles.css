@@ -57,7 +57,7 @@ div ul {
     display: flex;
     align-items: center;
     height: 100vh;
-    background-image: url(image1.jpeg); 
+    background-image: url(assets/image1.jpeg); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
@@ -449,7 +449,7 @@ div ul {
       align-items: center;
       justify-content: center;
       height: 100vh;
-      background-image: url(image1.jpeg); 
+      background-image: url(assets/image1.jpeg); 
       background-size: cover;
       background-position: center;
       background-attachment: fixed; 
