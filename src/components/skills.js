@@ -7,56 +7,36 @@ import js from "../assets/java-script.png";
 import nest from "../assets/nest.png";
 import mongo from "../assets/mongo.png";
 import react from "../assets/react.png";
-import python from '../assets/python.png';
-import ts from '../assets/ts.png'
+import python from "../assets/python.png";
+import ts from "../assets/ts.png";
 
 function Skills() {
+  const skills = [
+    { id: 1, name: "Html", image: html, class: "html" },
+    { id: 2, name: "Css", image: css, class: "css" },
+    { id: 3, name: "Javascript", image: js, class: "js" },
+    { id: 4, name: "Bootstrap", image: bootstrap, class: "bootstrap" },
+    { id: 5, name: "NestJs", image: nest, class: "nest" },
+    { id: 6, name: "ReactJs", image: react, class: "react" },
+    { id: 7, name: "MongoDb", image: mongo, class: "mongo" },
+    { id: 8, name: "Python", image: python, class: "python" },
+    { id: 9, name: "Typescript", image: ts, class: "typescript" },
+    { id: 10, name: "Sql", image: sql, class: "sql" },
+  ];
   return (
-   <div className="skillswrap" id="skills">
-   <div className="skill">Technical <span style={{color:"#f39c12"}}> Skills</span></div>
-    <div className="skills-container">
-      <div className="skill-card">
-        <img src={html} alt="HTML" className="html" />
-        <span>Html</span>
+    <div className="skillswrap" id="skills">
+      <div className="skill">
+        Technical <span style={{ color: "#f39c12" }}> Skills</span>
       </div>
-      <div className="skill-card">
-        <img src={css} alt="CSS" className="css" />
-        <span>Css</span>
-      </div>
-      <div className="skill-card">
-        <img src={js} alt="JavaScript" className="js" />
-        <span>Javascript</span>
-      </div>
-      <div className="skill-card">
-        <img src={bootstrap} alt="Bootstrap" className="bootstrap" />
-        <span>Bootstrap</span>
-      </div>
-      <div className="skill-card">
-        <img src={react} alt="React" className="react" />
-        <span>ReactJs</span>
-      </div>
-      <div className="skill-card">
-        <img src={nest} alt="NestJS" className="nest" />
-        <span>NestJs</span>
-      </div>
-      <div className="skill-card">
-        <img src={sql} alt="SQL" className="sql" />
-        <span>Sql</span>
-      </div>
-      <div className="skill-card">
-        <img src={mongo} alt="MongoDB" className="mongo" />
-        <span>MongoDb</span>
-      </div>
-      <div className="skill-card">
-        <img src={python} alt="python" className="python" />
-        <span>Python</span>
-      </div>
-      <div className="skill-card">
-        <img src={ts} alt="typescript" className="typescript" />
-        <span>Typescript</span>
+      <div className="skills-container">
+        {skills.map((skill) => (
+          <div className="skill-card">
+            <img src={skill.image} alt={skill.name} className={skill.class} />
+            <span>{skill.name}</span>
+          </div>
+        ))}
       </div>
     </div>
-   </div>
   );
 }
 

@@ -11,7 +11,7 @@ function Navbar() {
 
     return (
         <nav className="mainNav">
-            <div className='navName'>Portfolio</div>
+            <div className='navName'>Pradeep</div>
             <div>
                 <ul className={isOpen ? "active" : ""}>
                     <li>
