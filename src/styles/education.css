@@ -1,0 +1,132 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.education-wrap {
+  background-color: black;
+  padding: 60px 20px;
+  min-height: 100vh;
+  color: white;
+}
+
+.education-title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+/* Timeline Center Line */
+.timeline-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 50px 0;
+}
+
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: #00ffff;
+  box-shadow: 0 0 10px #00ffff;
+  z-index: 0;
+}
+
+/* Timeline Item Shared */
+.timeline-item {
+  width: 50%;
+  padding: 20px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background: #00ffff;
+  border-radius: 50%;
+  border: 3px solid #111;
+  box-shadow: 0 0 10px #00ffff;
+  z-index: 2;
+}
+
+/* Left and Right Positioning */
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+.timeline-item.left::before {
+  right: -10px;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+.timeline-item.right::before {
+  left: -10px;
+}
+
+/* Card Styling */
+.timeline-content {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px transparent;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.timeline-content:hover {
+  box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+  transform: scale(1.02);
+}
+
+/* Text and Image */
+.timeline-content h3 {
+  color: #00ffff;
+  margin-bottom: 10px;
+}
+
+.timeline-content p,
+.timeline-content span {
+  color: #ccc;
+}
+
+@media screen and (max-width: 768px) {
+  .education-title {
+    font-size: 30px;
+  }
+
+  .timeline-content {
+    padding: 12px;
+  }
+
+  .education-image img {
+    width: 40px;
+    height: auto;
+    margin-bottom: 8px;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-content p,
+  .timeline-content span {
+    font-size: 0.9rem;
+  }
+
+  .timeline-item {
+    padding: 12px;
+  }
+}

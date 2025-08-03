@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles.css'; 
+import '../styles/home.css'; 
 
 function Home() {
     return (
@@ -19,17 +19,6 @@ function Home() {
                         <i className="fa-solid fa-envelope"></i>
                     </a>
                 </div>
-                {/* Button to download resume */}
-                {/* <div className="download-btn-container">
-                    <a 
-                        href="https://drive.google.com/your-resume-link"  // Replace with your Google Drive resume link
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="download-btn"
-                    >
-                        Download Resume
-                    </a>
-                </div> */}
             </div>
         </div>
     );

@@ -1,0 +1,85 @@
+/* Basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.contact-us-page {
+  text-align: center;
+  padding: 60px 20px;
+  margin: 0 auto;
+  background-color: black;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  color: #b9b2b2;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+/* Social Media Links */
+.social-links-contact {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.social-button {
+  position: relative;
+}
+
+.social-button a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  color: #555;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+.social-button a:hover {
+  background-color: #0077b5;
+  color: white;
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.social-button a:hover i {
+  color: #fff;
+}
+
+.social-button i {
+  margin-top: 10px;
+  font-size: 1.8rem;
+  transition: color 0.3s ease;
+}
+
+.icon-text {
+  position: absolute;
+  bottom: -25px; /* Position it below the icon */
+  left: 6%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  color: rgb(9, 143, 226);
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.social-button a:hover .icon-text {
+  opacity: 1;
+  transform: translateY(0); /* Bring the text into view when hovered */
+}

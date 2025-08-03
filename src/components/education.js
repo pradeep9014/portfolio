@@ -1,8 +1,10 @@
+// src/components/Education.jsx
 import React from "react";
-import "../styles.css";
-import sscImage from "../assets/school.png"; 
+import { motion } from "framer-motion";
+import sscImage from "../assets/school.png";
 import intermediateImage from "../assets/college.png";
-import btechImage from "../assets/education.png"; 
+import btechImage from "../assets/education.png";
+import "../styles/education.css";
 
 function Education() {
   const educationDetails = [
@@ -10,37 +12,38 @@ function Education() {
       course: "Secondary School",
       school: "Narayan E-Techno School",
       year: "2017-18",
-      image: sscImage, 
     },
     {
       course: "Intermediate",
       school: "Narayan Junior College",
       year: "2018-20",
-      image: intermediateImage, 
     },
     {
-      course: "B.Tech(Cse)",
+      course: "B.Tech (CSE)",
       school: "Raghu Institute of Technology",
       year: "2020-24",
-      image: btechImage, 
     },
   ];
 
   return (
     <div className="education-wrap" id="education">
       <div className="education-title">Education</div>
-      <div className="education-container">
+      <div className="timeline-container">
         {educationDetails.map((education, index) => (
-          <div className="education-card" key={index}>
-            <div className="education-image">
-              <img src={education.image} alt={education.course} />
-            </div>
-            <div className="education-text">
+          <motion.div
+            className={`timeline-item ${index % 2 === 0 ? "left" : "right"}`}
+            key={index}
+            initial={{ opacity: 0, x: index % 2 === 0 ? -80 : 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="timeline-content">
               <h3>{education.course}</h3>
               <p>{education.school}</p>
               <span>{education.year}</span>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

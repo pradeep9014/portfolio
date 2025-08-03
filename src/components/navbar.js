@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
-import '../styles.css';
+import "../styles/navbar.css"
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
