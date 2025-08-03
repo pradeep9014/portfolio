@@ -27,10 +27,24 @@
 }
 
 div ul li {
-  color: white;
   list-style: none;
   margin: 10px;
   cursor: pointer;
+  font-size: 18px;
+}
+
+/* Link styling with bubble-out effect */
+div ul li a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+div ul li a:hover {
+  color: rgb(14, 119, 225);
+  text-decoration: underline;
+  transform: scale(1.1);
 }
 
 div ul {
@@ -49,7 +63,6 @@ div ul {
   height: 3px;
   background-color: white;
   margin: 4px 0;
-  transition: all 0.3s ease;
 }
 
 /* Media Queries for Responsiveness */
@@ -97,7 +110,3 @@ div ul {
     margin: 15px 0;
   }
 }
-
-
-
-

@@ -38,7 +38,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="portfolio-container" ref={containerRef}>
+    <div className="portfolio-container" ref={containerRef} id="home">
       <div className="background-gradient"></div>
       <div className="grid-overlay"></div>
 
