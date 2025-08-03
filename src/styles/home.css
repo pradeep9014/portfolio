@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body-container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 100px;
+  margin-top: 30px; /* To account for fixed navbar */
+}
+
+.intro {
+  padding: 30px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.greeting {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-bottom: 10px;
+}
+
+.role {
+  font-size: 2rem;
+  color: #f39c12;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* Style for the social icons */
+.social-links {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Individual icon styling */
+.social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #0077b5;
+  border-color: #0077b5;
+  color: white;
+}
+
+/* Icon size adjustment */
+.social-links a i {
+  font-size: 20px;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .greeting {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .name {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .role {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .body-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20px;
+    margin-top: -30px;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -9,6 +9,7 @@ import mongo from "../assets/mongo.png";
 import react from "../assets/react.png";
 import python from "../assets/python.png";
 import ts from "../assets/ts.png";
+import "../styles/skill.css"
 
 function Skills() {
   const skills = [
