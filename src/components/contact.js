@@ -8,23 +8,29 @@ const Contact = () => {
       <p className="intro-text">I'd love to hear from you! Feel free to reach out if you'd like to connect.</p>
 
       <div className="social-links-contact">
-        <div className="social-button">
+        <div className="social-button contact">
           <a href="https://www.linkedin.com/in/pradeep-reddy-634691284/" target="_blank" rel="noopener noreferrer">
-            <i className="fa-brands fa-linkedin"></i>
+            <div className="icon-circle">
+              <i className="fa-brands fa-linkedin"></i>
+            </div>
             <span className="icon-text">LinkedIn</span>
           </a>
         </div>
 
-        <div className="social-button">
+        <div className="social-button email">
           <a href="mailto:pradeepreddy9014@gmail.com" target="_blank" rel="noopener noreferrer">
-            <i className="fa-solid fa-envelope"></i>
+            <div className="icon-circle">
+              <i className="fa-solid fa-envelope"></i>
+            </div>
             <span className="icon-text">Email</span>
           </a>
         </div>
 
-        <div className="social-button">
+        <div className="social-button instagram">
           <a href="https://www.instagram.com/__pradeep__reddy__/" target="_blank" rel="noopener noreferrer">
-            <i className="fa-brands fa-instagram"></i>
+            <div className="icon-circle">
+              <i className="fa-brands fa-instagram"></i>
+            </div>
             <span className="icon-text">Instagram</span>
           </a>
         </div>

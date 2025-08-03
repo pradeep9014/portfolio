@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .contact-us-page {
   text-align: center;
   padding: 60px 20px;
@@ -25,61 +26,188 @@ h1 {
   font-weight: 400;
 }
 
-/* Social Media Links */
+/* Enhanced Social Media Links */
 .social-links-contact {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  margin-top: 30px;
+  gap: 60px;
+  margin-top: 40px;
 }
 
 .social-button {
   position: relative;
+  perspective: 1000px;
 }
 
 .social-button a {
   display: block;
-  width: 50px;
-  height: 50px;
   text-decoration: none;
-  background-color: #fff;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  color: #555;
-  transition: all 0.3s ease-in-out;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
 }
 
-.social-button a:hover {
-  background-color: #0077b5;
-  color: white;
-  transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.social-button a:hover i {
-  color: #fff;
+.icon-circle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.4s ease;
 }
 
 .social-button i {
-  margin-top: 10px;
-  font-size: 1.8rem;
-  transition: color 0.3s ease;
+  font-size: 2.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.4s ease;
+  z-index: 2;
+  position: relative;
 }
 
 .icon-text {
   position: absolute;
-  bottom: -25px; /* Position it below the icon */
-  left: 6%;
+  bottom: -35px;
+  left: 50%;
   transform: translateX(-50%);
-  font-size: 0.9rem;
-  color: rgb(9, 143, 226);
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 600;
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  white-space: nowrap;
 }
 
-.social-button a:hover .icon-text {
+/* LinkedIn Hover Effects */
+.social-button.contact:hover .icon-circle {
+  background: linear-gradient(135deg, #0077b5, #005885);
+  border-color: #0077b5;
+  transform: translateY(-10px) scale(1.1);
+  box-shadow: 
+    0 20px 40px rgba(0, 119, 181, 0.4),
+    0 0 50px rgba(0, 119, 181, 0.6),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.social-button.contact:hover .icon-circle::before {
+  background: linear-gradient(135deg, #0077b5, #005885);
   opacity: 1;
-  transform: translateY(0); /* Bring the text into view when hovered */
+}
+
+.social-button.contact:hover i {
+  color: white;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
+
+.social-button.contact:hover .icon-text {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+  color: #0077b5;
+  text-shadow: 0 0 10px rgba(0, 119, 181, 0.8);
+}
+
+/* Email Hover Effects */
+.social-button.email:hover .icon-circle {
+  background: linear-gradient(135deg, #ea4335, #c23321);
+  border-color: #ea4335;
+  transform: translateY(-10px) scale(1.1);
+  box-shadow: 
+    0 20px 40px rgba(234, 67, 53, 0.4),
+    0 0 50px rgba(234, 67, 53, 0.6),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.social-button.email:hover .icon-circle::before {
+  background: linear-gradient(135deg, #ea4335, #c23321);
+  opacity: 1;
+}
+
+.social-button.email:hover i {
+  color: white;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
+
+.social-button.email:hover .icon-text {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+  color: #ea4335;
+  text-shadow: 0 0 10px rgba(234, 67, 53, 0.8);
+}
+
+/* Instagram Hover Effects */
+.social-button.instagram:hover .icon-circle {
+  background: linear-gradient(135deg, #e4405f, #833ab4, #fccc63);
+  border-color: #e4405f;
+  transform: translateY(-10px) scale(1.1);
+  box-shadow: 
+    0 20px 40px rgba(228, 64, 95, 0.4),
+    0 0 50px rgba(228, 64, 95, 0.6),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.social-button.instagram:hover .icon-circle::before {
+  background: linear-gradient(135deg, #e4405f, #833ab4, #fccc63);
+  opacity: 1;
+}
+
+.social-button.instagram:hover i {
+  color: white;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
+
+.social-button.instagram:hover .icon-text {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+  color: #e4405f;
+  text-shadow: 0 0 10px rgba(228, 64, 95, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .social-links-contact {
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .icon-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .social-button i {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-links-contact {
+    gap: 30px;
+  }
+
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .social-button i {
+    font-size: 1.8rem;
+  }
 }
